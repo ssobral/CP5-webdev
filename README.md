@@ -7,3 +7,7 @@ Pedro Ananias RM550689
 
 Link do projeto vercel:
 https://cp-5-webdev.vercel.app/
+
+Foi utilizado o comando:
+npm i react-social-icons
+para coletar icones das redes sociais

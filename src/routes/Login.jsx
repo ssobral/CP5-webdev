@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Produtos from './Produtos';
+import Pedido from './Pedido';
+
 
 
 function Login() {
@@ -27,7 +28,7 @@ function Login() {
     <section>
       <h1>Login</h1>
       {getUser && getSenha ? (
-        <Produtos />
+        <Pedido />
       ) : (
         <form onSubmit={handleSubmit}>
           <div>

@@ -1,52 +1,60 @@
-import {useState,useEffect} from 'react'
-import {Swiper, SwiperSlide} from 'swiper/react';
-import styles from '../routes/estilo.module.css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
+import {} from 'react'
+//importando a estrutura para maninupar as imagens
+import {Swiper, SwiperSlide} from 'swiper/react'
+import {useState, useEffect} from 'react'
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import styles from './estilo.module.css';
 
 
 function Home (){
 
-  const [slidePerView, setSlidePerView]=useState(2);
+  //Hooks
 
-  const imagens =[
-    {id:'1', image: './src/assets/eclipse.webp'},
-    {id:'2', image: './src/assets/lancerevo.jpg'},
-    {id:'3', image: './src/assets/supra.webp'},
-  ];
+    const [slidepreview, setSlidepreview] =useState(1);
 
+  // crinado o ojeto de imagems
+     const data =[
+      {id: '1', image: './src/assets/supra.webp'},
+      {id: '2', image: './src/assets/lancerevo.jpg'},
+      {id: '3', image: './src/assets/eclipse.webp'},
 
-  useEffect(()=>{
-    function handleResize() {
-      if(window.innerWidth < 720){
-        setSlidePerView(2);
-      }else {
-        setSlidePerView(1);
+    ];
+// useEffect faz o efeito colateral 
+    useEffect(() =>{
+      function handleRezise(){
+        if(window.innerWidth < 720){
+          setSlidepreview(1);
+        }else{
+          setSlidepreview(2);
+        }
       }
-    }
+      handleRezise();
 
-    handleResize();
-    window.addEventListener('resize',handleResize);
-
-    return ()=>{
-      window.removeEventListener('resize', handleResize)
-    }
-  },[]);
+      //modifica toda vez que o usuario diminuir a tela
+      window.addEventListener('resize', handleRezise);
+      return()=>{
+        window.removeEventListener('resize', handleRezise);
+      };
+      //retornando um array vazio
+    },[]);
 
 
   return(
     <section>
-      <Swiper
-      slidePerView={ slidePerView}
-      pagination={{clickable:true}}
-      navigation
+      <p>Seja bem vindo a loja de carros mais sofisticada do Brasil, com uma variedade imensa no estoque e preços baixos.</p>
+      <Swiper 
+       slidepreview={slidepreview}
+       pagination={{clickable:true}}
+       navigation
       >
-        {imagens.map((item)=>
+        {data.map((item)=>(
           <SwiperSlide key={item.id}>
-            <img src={item.image} alt='slide' className={styles.slideItem}/>
+            <img src={item.image} alt="imagem" className={styles.slideItem}/>
           </SwiperSlide>
-        )}
+        ))}
       </Swiper>
+      
     </section>
   )
 }

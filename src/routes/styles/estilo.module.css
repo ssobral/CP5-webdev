@@ -1,0 +1,12 @@
+@import url('./home.module.css');
+@import url('./produtos.modules.css');
+@import url('./editar.module.css');
+@import url('./excluir.module.css');
+@import url('./sobre.module.css');
+@import url('./login.module.css');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}

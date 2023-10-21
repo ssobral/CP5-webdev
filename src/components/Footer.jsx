@@ -14,7 +14,7 @@ function Footer(){
     return(
         <>
             <section className={styles.footer}>
-                <h1>@2023 - Direitos reservados.</h1>
+                <h1 className={styles.texto}>@2023 - Direitos reservados.</h1>
                 <div className={styles.social}>
                     <Face/>
                     <Insta/>

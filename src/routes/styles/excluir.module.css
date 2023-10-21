@@ -1,0 +1,39 @@
+.excluir{
+    background-color: #262626;
+    display: flex;
+    flex-direction: column;
+}
+
+.excluir_titulo{
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    margin-top: 1rem;
+}
+
+.excluir_item{
+    color: white;
+    text-align: center;
+    margin:1rem;
+}
+
+.excluir_item_destaque{
+    text-transform: uppercase;
+}
+
+.excluir_buttons{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.excluir_button{
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate, useParams} from 'react-router-dom'
 import { ListaPedido } from '../components/ListaPedido'
+import styles from './styles/estilo.module.css';
 
 
 function EditarPedido (){
@@ -35,22 +36,23 @@ function EditarPedido (){
 
 
   return(
-    <section >
-        <h1>Editar Pedido:</h1>
+    <section className={styles.editar}>
+        <h1 className={styles.titulo_editar}>Editar Pedido:</h1>
         <form onSubmit={handleSubmit}>
-          <h2>Produto selecionado:</h2>
+          <h2 className={styles.titulo_form}>Produto selecionado:</h2>
           <div>
             <input type='hidden' name='id' value={produto.id} onChange={handleChange}></input>
           </div>
-          <div>
-            <label htmlFor='idNome'>Nome do Produto:</label>
+          <div className={styles.item_form}>
+            <label htmlFor='idNome' className={styles.editar_form_item}>Nome do Produto:</label>
             <input type='text' name='nome' id='idNome' value={produto.nome} onChange={handleChange}></input>
           </div>
-          <div>
-            <label htmlFor='idValor'>Valor do Produto:</label>
+          <div className={styles.item_form}>
+            <label htmlFor='idValor' className={styles.editar_form_item}>Valor do Produto:</label>
             <input type='text' name='valor' id='idValor' value={produto.valor} onChange={handleChange}></input>
+            <button type='submit' className={styles.button_editar}>Editar</button>
           </div>
-          <button type='submit'>Editar</button>
+          
         </form>
     </section>
   )

@@ -1,0 +1,71 @@
+.produtos {
+    background-color: #262626;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo_produtos {
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    margin-top: 1rem;
+}
+
+table.tabela {
+    width: 60%;
+    margin: 0 auto;
+}
+
+table.tabela th,
+table.tabela td {
+    padding: 10px;
+}
+
+table.tabela th {
+    background: linear-gradient(to top, #262626, #8B0000);
+}
+
+table.tabela th:nth-child(1),
+table.tabela td:nth-child(1) {
+    width: 10%;
+}
+
+table.tabela th:nth-child(2),
+table.tabela td:nth-child(2) {
+    width: 30%;
+}
+
+table.tabela th:nth-child(3),
+table.tabela td:nth-child(3) {
+    width: 20%;
+}
+
+table.tabela th:nth-child(4),
+table.tabela td:nth-child(4) {
+    width: 20%;
+}
+
+table.tabela a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.button_cadastro {
+    text-align: center;
+    margin: 3rem;
+
+}
+
+.button{
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.titulo_tabela,
+.item_tabela {
+    color: white;
+}

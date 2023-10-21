@@ -17,3 +17,7 @@
     display: flex;
     gap: 1rem;
 }
+
+.texto{
+    color: white;
+}

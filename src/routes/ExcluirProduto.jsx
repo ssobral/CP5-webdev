@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { ListaProdutos } from '../components/ListaProdutos';
+import styles from './styles/estilo.module.css';
 
 
 function ExcluirProduto (){
@@ -29,15 +30,15 @@ function ExcluirProduto (){
   };
 
   return(
-    <section>
-      <h1>Excluir Produto</h1>
+    <section className={styles.excluir}>
+      <h1 className={styles.excluir_titulo}>Excluir Produto</h1>
       <div>
-        <p>Nome : {produto.nome}</p>
-        <p>valor : {produto.valor}</p>
+        <p className={styles.excluir_item}><strong className={styles.excluir_item_destaque}>Nome :</strong> {produto.nome}</p>
+        <p className={styles.excluir_item}><strong className={styles.excluir_item_destaque}>Valor :</strong> {produto.valor}</p>
       </div>
-      <div>
-        <button onClick={handleExclude}>EXCLUIR</button>
-        <button onClick={() => navigate('/produtos')}>CANCELAR</button>
+      <div className={styles.excluir_buttons}>
+        <button onClick={handleExclude} className={styles.excluir_button}>EXCLUIR</button>
+        <button onClick={() => navigate('/produtos')} className={styles.excluir_button}>CANCELAR</button>
       </div>
     </section>
   )

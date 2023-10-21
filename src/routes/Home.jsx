@@ -3,11 +3,12 @@ import {Swiper, SwiperSlide} from 'swiper/react'
 import {useState, useEffect} from 'react'
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import styles from './estilo.module.css';
-import eclipse from '../assets/eclipse.webp';
-import lancerevo from '../assets/lancerevo.jpg';
-import supra from '../assets/supra.webp';
-import style from '../routes/estilo.module.css'
+import styles from './styles/estilo.module.css';
+import comidajaponesa1 from '../assets/comidajaponesa1.webp';
+import comidajaponesa2 from '../assets/comidajaponesa2.webp';
+import comidajaponesa3 from '../assets/comidajaponesa3.jpg';
+
+
 
 
 
@@ -16,9 +17,9 @@ function Home (){
     const [slidepreview, setSlidepreview] =useState(1);
 
      const data =[
-      {id: '1', image: supra},
-      {id: '2', image: lancerevo},
-      {id: '3', image: eclipse},
+      {id: '1', image: comidajaponesa1},
+      {id: '2', image: comidajaponesa2},
+      {id: '3', image: comidajaponesa3},
 
     ];
 
@@ -50,8 +51,8 @@ function Home (){
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className={style.espaco_texto}> 
-      <p className={style.texto}>Seja bem vindo a loja de carros mais sofisticada do Brasil, com uma variedade imensa no estoque e preços baixos.</p>
+      <div className={styles.espaco_texto}> 
+      <p className={styles.texto}>Seja bem vindo ao restaurante de comida japonesa mais sofisticado do Brasil, com uma variedade imensa de receitas e preços baixos.</p>
       </div>
       
     </section>

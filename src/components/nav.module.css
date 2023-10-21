@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.nav{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    max-width: 32rem;
+    padding-bottom: 1rem;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    margin: 2rem 0 2rem 0;
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.menunav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tlink{
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    background-image: url('../assets/fundo.jpg');
+}
+
+.menu{
+    background-color: #262626;
+}

@@ -1,5 +1,6 @@
 import {} from 'react';
 import { Link,useNavigate } from 'react-router-dom';
+import styles from '../components/nav.module.css'
 
 function Nav(){
     const navigate = useNavigate();
@@ -13,14 +14,14 @@ function Nav(){
 
     return(
         <>
-            <header>
-                <h2>Projeto Web</h2>
-                <nav>
-                    <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="produtos">Produtos</Link></li>
-                        <li><Link to="sobre">Sobre nós</Link></li>
-                        <li><Link to="login">Login</Link></li>
+            <header className={styles.menu}>
+                <h2 className={styles.titulo}>Kioto</h2>
+                <nav className={styles.menunav}>
+                    <ul className={styles.nav}>
+                        <li><Link to="/" className={styles.tlink}>Home</Link></li>
+                        <li><Link to="produtos" className={styles.tlink}>Produtos</Link></li>
+                        <li><Link to="sobre" className={styles.tlink}>Sobre nós</Link></li>
+                        <li><Link to="login" className={styles.tlink}>Login</Link></li>
                         <li><button onClick={handleLogout}>Logout</button></li>
                     </ul>
                 </nav>

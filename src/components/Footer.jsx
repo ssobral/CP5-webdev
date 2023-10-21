@@ -1,21 +1,28 @@
 import {} from 'react'
-import { SocialIcon } from 'react-social-icons/component'
 import 'react-social-icons/instagram'
 import 'react-social-icons/facebook'
 import 'react-social-icons/linkedin'
 import 'react-social-icons/email'
+import { FaFacebookF as Face } from "react-icons/fa6";
+import { FaInstagram as Insta } from "react-icons/fa6";
+import { FaLinkedinIn as In } from "react-icons/fa6";
+import { FaVoicemail as Mail } from "react-icons/fa6";
+import styles from '../components/footer.module.css'
 
 
 function Footer(){
     return(
         <>
-            <section>
+            <section className={styles.footer}>
                 <h1>@2023 - Direitos reservados.</h1>
-                <SocialIcon url="www.instagram.com" />
-                <SocialIcon url="www.facebook.com" />
-                <SocialIcon url="www.linkedin.com" />
-                <SocialIcon url="www.email.com" />
+                <div className={styles.social}>
+                    <Face/>
+                    <Insta/>
+                    <In/>
+                    <Mail/>
+                </div>
             </section>
+            
         </>
     )
 }

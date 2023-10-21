@@ -7,6 +7,7 @@ import styles from './estilo.module.css';
 import eclipse from '../assets/eclipse.webp';
 import lancerevo from '../assets/lancerevo.jpg';
 import supra from '../assets/supra.webp';
+import style from '../routes/estilo.module.css'
 
 
 
@@ -42,7 +43,6 @@ function Home (){
 
   return(
     <section>
-      <p>Seja bem vindo a loja de carros mais sofisticada do Brasil, com uma variedade imensa no estoque e preços baixos.</p>
       <Swiper slidepreview={slidepreview} pagination={{clickable:true}} navigation>
         {data.map((item)=>(
           <SwiperSlide key={item.id}>
@@ -50,6 +50,10 @@ function Home (){
           </SwiperSlide>
         ))}
       </Swiper>
+      <div className={style.espaco_texto}> 
+      <p className={style.texto}>Seja bem vindo a loja de carros mais sofisticada do Brasil, com uma variedade imensa no estoque e preços baixos.</p>
+      </div>
+      
     </section>
   )
 }
